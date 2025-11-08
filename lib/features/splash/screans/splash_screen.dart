@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:genuis_auction_app/features/splash/widgets/polygon_painter.dart';
-import 'package:genuis_auction_app/screens/onboarding/onboarding_screen.dart';
+import 'package:genuis_auction_app/features/onboarding/screans/onboarding_screen.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({Key? key}) : super(key: key);

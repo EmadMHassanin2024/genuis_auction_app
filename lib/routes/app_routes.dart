@@ -4,7 +4,7 @@ import 'package:genuis_auction_app/features/agreement/screens/auction_agreementP
 import 'package:genuis_auction_app/features/wallet/screens/wallet_screen.dart';
 import 'package:genuis_auction_app/screens/auth/login_screen.dart';
 import '../features/splash/screans/splash_screen.dart';
-import '../screens/onboarding/onboarding_screen.dart';
+import '../features/onboarding/screans/onboarding_screen.dart';
 
 class AppRoutes {
   static const String splash = '/';
