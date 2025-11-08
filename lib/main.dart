@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:genuis_auction_app/core/core.dart';
 import 'routes/app_routes.dart';
 
 void main() {
@@ -13,7 +14,8 @@ class AuctionApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Auction App',
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(primarySwatch: AppColors.primarySwatch),
+
       initialRoute: AppRoutes.splash,
       routes: AppRoutes.routes,
     );

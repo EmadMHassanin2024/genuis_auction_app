@@ -1,12 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:genuis_auction_app/features/Invoic/widgets/billing_section.dart';
-import 'package:genuis_auction_app/features/Invoic/widgets/bottom_nav_bar.dart';
-import 'package:genuis_auction_app/features/Invoic/widgets/invoice_details.dart';
-import 'package:genuis_auction_app/features/Invoic/widgets/invoice_header.dart';
-import 'package:genuis_auction_app/features/Invoic/widgets/invoice_profile.dart';
-import 'package:genuis_auction_app/features/Invoic/widgets/shopping_card.dart';
-import 'package:genuis_auction_app/features/Invoic/widgets/total_amount_card.dart';
-import 'package:genuis_auction_app/routes/app_routes.dart';
+import 'package:genuis_auction_app/features/features.dart';
 
 class InvoicePage extends StatelessWidget {
   const InvoicePage({super.key});

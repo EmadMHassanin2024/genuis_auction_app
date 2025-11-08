@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:genuis_auction_app/features/wallet/widgets/wallet_header.dart';
 
-import '../widgets/payment_tile.dart';
-import '../widgets/add_method_button.dart';
+import 'package:genuis_auction_app/features/features.dart';
 
 class WalletPage extends StatelessWidget {
   const WalletPage({super.key});

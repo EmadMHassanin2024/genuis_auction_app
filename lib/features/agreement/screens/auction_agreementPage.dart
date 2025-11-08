@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import '../widgets/header_section.dart';
-import '../widgets/steps_section.dart';
-import '../widgets/agreement_section.dart';
-import '../widgets/submit_section.dart';
-import '../widgets/bottom_nav_bar.dart';
+
+import 'package:genuis_auction_app/features/features.dart';
 
 class AuctionAgreementPage extends StatelessWidget {
   const AuctionAgreementPage({super.key});

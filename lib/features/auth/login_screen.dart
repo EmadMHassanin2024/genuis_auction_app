@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:genuis_auction_app/core/core.dart';
-import 'package:genuis_auction_app/routes/app_routes.dart';
-import 'package:genuis_auction_app/widgets/widgets.dart';
+import 'package:genuis_auction_app/features/features.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});

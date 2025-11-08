@@ -1,12 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:genuis_auction_app/features/onboarding/widgets/bottom_line.dart';
-import 'package:genuis_auction_app/features/onboarding/widgets/onboarding_texts.dart';
-import 'package:genuis_auction_app/features/onboarding/widgets/progress_indicator_row.dart';
-import 'package:genuis_auction_app/features/onboarding/widgets/second_image.dart';
-import 'package:genuis_auction_app/features/onboarding/widgets/skip_button.dart';
-import 'package:genuis_auction_app/features/onboarding/widgets/white_box_image.dart';
-
-import 'package:genuis_auction_app/screens/auth/login_screen.dart';
+import 'package:genuis_auction_app/features/features.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({Key? key}) : super(key: key);

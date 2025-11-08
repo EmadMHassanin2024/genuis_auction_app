@@ -13,6 +13,8 @@ class AppColors {
   static const Color textDark = Color(0xFF3D3D3D);
   static const Color textLight = Colors.white;
 
+  static const MaterialColor primarySwatch = Colors.blue;
+
   // ألوان الصفحة
   static const Color primaryColor = Color(0xFF224F78); // أزرق عميق
   static const Color accentColor = Color(0xFFE0B168); // ذهبي دافئ

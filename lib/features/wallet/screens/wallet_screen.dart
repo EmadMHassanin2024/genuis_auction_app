@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:genuis_auction_app/core/core.dart';
-import 'package:genuis_auction_app/features/wallet/widgets/wallet_header.dart';
-import 'package:genuis_auction_app/features/wallet/widgets/wallet_navbar.dart';
-import 'package:genuis_auction_app/features/wallet/widgets/wallet_transactions.dart';
-import 'package:genuis_auction_app/routes/app_routes.dart'; // ✅ مهم جدًا
+import 'package:genuis_auction_app/features/features.dart';
 
 class WalletScreen extends StatelessWidget {
   const WalletScreen({super.key});
