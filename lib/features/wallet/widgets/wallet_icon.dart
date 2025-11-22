@@ -7,26 +7,36 @@ class WalletIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Container(
-        width: 90,
-        height: 90,
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: Colors.white,
-          border: Border.all(color: Colors.white, width: 2),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.15),
-              blurRadius: 10,
-              offset: const Offset(0, 6),
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          // الإطار الأبيض الخارجي
+          Container(
+            width: 80,
+            height: 80,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: AppColors.primary, // الإطار الأبيض
             ),
-          ],
-        ),
-        child: const Icon(
-          Icons.account_balance_wallet_rounded,
-          color: AppColors.bgTop,
-          size: 42,
-        ),
+          ),
+
+          // خلفية الدائرة الملونة
+          Container(
+            width: 84, // أقل قليلاً لإظهار الإطار الأبيض حولها
+            height: 84,
+            decoration: BoxDecoration(shape: BoxShape.circle),
+          ),
+
+          // الصورة داخل الدائرة
+          ClipOval(
+            child: Image.asset(
+              'assets/images/7.jpg',
+              width: 80, // أقل من الخلفية لتبقى الحدود مرئية
+              height: 80,
+              fit: BoxFit.cover,
+            ),
+          ),
+        ],
       ),
     );
   }

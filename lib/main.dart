@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:genuis_auction_app/core/core.dart';
+import 'package:genuis_auction_app/features/Chatscreans/screens/chat_screan.dart';
+import 'package:genuis_auction_app/features/ClosedAuction/screans/ClosedAuctionPage.dart';
+import 'package:genuis_auction_app/features/Invoic/screans/InvoiceApp.dart';
+
 import 'routes/app_routes.dart';
 
 void main() {
@@ -14,10 +17,10 @@ class AuctionApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Auction App',
-      theme: ThemeData(primarySwatch: AppColors.primarySwatch),
-
-      initialRoute: AppRoutes.splash,
-      routes: AppRoutes.routes,
+      // theme: ThemeData(primarySwatch: AppColors.primarySwatch),
+      home: InvoicePage(),
+      // initialRoute: AppRoutes.splash,
+      // routes: AppRoutes.routes,
     );
   }
 }

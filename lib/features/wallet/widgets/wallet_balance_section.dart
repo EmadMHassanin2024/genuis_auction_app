@@ -11,19 +11,36 @@ class WalletBalanceSection extends StatelessWidget {
           Text(
             'BALANCE',
             style: TextStyle(
-              color: Colors.white70,
-              fontSize: 16,
+              color: Colors.white,
+              fontSize: 30,
               letterSpacing: 1,
             ),
           ),
           SizedBox(height: 6),
-          Text(
-            '\$3220.50',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 30,
-              fontWeight: FontWeight.bold,
-            ),
+
+          // --------------------------
+          //   الرصيد + أيقونة العين
+          // --------------------------
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                '\$3220.50',
+                style: TextStyle(
+                  color: Color(0xFF6E604A),
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+
+              SizedBox(width: 10),
+
+              Icon(
+                Icons.visibility_off, // العين المقفولة
+                color: Colors.white,
+                size: 28,
+              ),
+            ],
           ),
         ],
       ),

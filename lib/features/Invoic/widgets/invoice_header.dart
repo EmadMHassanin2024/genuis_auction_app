@@ -14,36 +14,45 @@ class InvoiceHeader extends StatelessWidget {
             children: [
               Row(
                 children: const [
-                  Icon(Icons.arrow_back, color: Colors.black),
+                  Icon(Icons.arrow_back, color: Colors.grey),
                   SizedBox(width: 8),
                   Text(
                     'Invoice',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),
                   ),
                 ],
               ),
               ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue,
+                  backgroundColor: Color(0xfffafafa),
+
                   padding: const EdgeInsets.symmetric(
-                    horizontal: 16,
-                    vertical: 8,
+                    horizontal: 12,
+                    vertical: 6,
                   ),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8),
                   ),
                 ),
-                child: const Text('New Auction'),
+                child: const Text(
+                  'New Auction',
+                  style: TextStyle(color: Colors.black, fontSize: 12),
+                ),
               ),
             ],
           ),
           const SizedBox(height: 8),
           Row(
+            mainAxisAlignment: MainAxisAlignment.end,
             children: const [
-              Icon(Icons.notifications, color: Colors.grey),
+              Icon(Icons.notifications, color: Colors.black),
               SizedBox(width: 16),
-              Icon(Icons.download, color: Colors.grey),
+              Icon(Icons.download, color: Colors.black),
             ],
           ),
         ],

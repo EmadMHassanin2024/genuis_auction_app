@@ -11,7 +11,6 @@ class WalletButtons extends StatelessWidget {
         Expanded(
           child: ElevatedButton.icon(
             style: ElevatedButton.styleFrom(
-              backgroundColor: AppColors.gold,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20),
               ),
@@ -19,11 +18,11 @@ class WalletButtons extends StatelessWidget {
               elevation: 0,
             ),
             onPressed: () {},
-            icon: const Icon(Icons.add, color: Colors.white, size: 20),
+            icon: const Icon(Icons.add, color: AppColors.bgTop, size: 20),
             label: const Text(
-              '+ Add Money',
+              ' Add Money',
               style: TextStyle(
-                color: Colors.white,
+                color: AppColors.bgTop,
                 fontWeight: FontWeight.w600,
               ),
             ),
@@ -41,11 +40,7 @@ class WalletButtons extends StatelessWidget {
               elevation: 0,
             ),
             onPressed: () {},
-            icon: const Icon(
-              Icons.receipt_long,
-              color: AppColors.bgTop,
-              size: 20,
-            ),
+            icon: const Icon(Icons.receipt_long, size: 20),
             label: const Text(
               'Invoice',
               style: TextStyle(

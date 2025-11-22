@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:genuis_auction_app/features/AboutUs/widgets/bottom_nav_icons.dart';
 import 'package:genuis_auction_app/features/features.dart';
 
 class InvoicePage extends StatelessWidget {
@@ -9,24 +10,15 @@ class InvoicePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
 
-      // 🔹 الزر البارز "+"
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          // هنا تضع الإجراء عند الضغط
-        },
-        backgroundColor: Colors.blue,
-        child: const Icon(Icons.add, size: 32, color: Colors.white),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-
       // 🔹 الشريط السفلي
-      bottomNavigationBar: const CustomBottomNavBar(),
+      bottomNavigationBar: BottomNavBarG(),
 
       // 🔹 المحتوى القابل للتمرير
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             children: [
+              SizedBox(height: 40),
               InvoiceHeader(),
               SizedBox(height: 12),
               InvoiceProfile(),
@@ -39,13 +31,6 @@ class InvoicePage extends StatelessWidget {
               SizedBox(height: 16),
               InvoiceDetails(),
               SizedBox(height: 16),
-
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.pushReplacementNamed(context, AppRoutes.wallet);
-                },
-                child: const Text("العودة للمحفظة"),
-              ),
             ],
           ),
         ),

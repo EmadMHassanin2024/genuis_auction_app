@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:genuis_auction_app/features/agreement/widgets/header_section.dart';
 
 import 'package:genuis_auction_app/features/features.dart';
 

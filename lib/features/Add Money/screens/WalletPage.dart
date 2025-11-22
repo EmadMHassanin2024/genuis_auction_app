@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:genuis_auction_app/features/features.dart';
 
 class WalletPage extends StatelessWidget {
@@ -41,30 +40,49 @@ class WalletPage extends StatelessWidget {
 
               const Divider(thickness: 1),
 
-              // قائمة طرق الدفع
+              // قائمة طرق الدفع مع الصور الجديدة
               Column(
-                children: const [
+                children: [
+                  // Mastercard
                   PaymentTile(
-                    icon: Icons.credit_card,
-                    iconColor: Colors.deepOrange,
+                    icon: Image.asset(
+                      'assets/images/8.png',
+                      width: 36,
+                      height: 36,
+                    ),
                     title: 'MASTERCARD',
                   ),
-                  Divider(thickness: 1),
+                  const Divider(),
+
+                  // VISA
                   PaymentTile(
-                    icon: Icons.payment,
-                    iconColor: Colors.blue,
+                    icon: Image.asset(
+                      'assets/images/9.png',
+                      width: 36,
+                      height: 36,
+                    ),
                     title: 'VISA CARD',
                   ),
-                  Divider(thickness: 1),
+                  const Divider(),
+
+                  // MADA
                   PaymentTile(
-                    icon: Icons.account_balance,
-                    iconColor: Colors.green,
+                    icon: Image.asset(
+                      'assets/images/10.png',
+                      width: 36,
+                      height: 36,
+                    ),
                     title: 'MADA',
                   ),
-                  Divider(thickness: 1),
+                  const Divider(),
+
+                  // Western Union (مثال باستخدام Icon فقط)
                   PaymentTile(
-                    icon: Icons.monetization_on,
-                    iconColor: Colors.amber,
+                    icon: Image.asset(
+                      'assets/images/11.png',
+                      width: 36,
+                      height: 36,
+                    ),
                     title: 'WESTERN UNION',
                   ),
                 ],
@@ -72,11 +90,36 @@ class WalletPage extends StatelessWidget {
 
               const SizedBox(height: 40),
 
-              const AddMethodButton(), // زر إضافة طريقة جديدة
+              const AddMethodButton(),
             ],
           ),
         ),
       ),
+    );
+  }
+}
+
+/// =======================================================================
+///                               PAYMENT TILE
+/// =======================================================================
+
+class PaymentTile extends StatelessWidget {
+  final Widget icon;
+  final String title;
+
+  const PaymentTile({super.key, required this.icon, required this.title});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      contentPadding: const EdgeInsets.symmetric(horizontal: 16),
+      leading: icon,
+      title: Text(
+        title,
+        style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+      ),
+      trailing: const Icon(Icons.arrow_forward_ios, size: 18),
+      onTap: () {},
     );
   }
 }

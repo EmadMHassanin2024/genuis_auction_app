@@ -9,7 +9,8 @@ class ShoppingCard extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 16),
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: const Color(0xFF092E2F),
+        color: const Color(0xFF224f78),
+
         borderRadius: BorderRadius.circular(16),
       ),
       child: Column(

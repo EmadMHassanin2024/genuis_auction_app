@@ -28,33 +28,68 @@ class WalletTopRow extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white,
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 14,
-                      vertical: 6,
+                SizedBox(
+                  height: 30, // ارتفاع الزر
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      padding: const EdgeInsets.symmetric(horizontal: 14),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: const BorderRadius.only(
+                          topLeft: Radius.circular(
+                            10,
+                          ), // الزاوية اليسرى العليا دائرية
+                          bottomLeft: Radius.circular(
+                            10,
+                          ), // الزاوية اليسرى السفلى دائرية
+                          topRight: Radius.circular(
+                            10,
+                          ), // الزاوية اليسرى الس, // الزاوية اليمنى العليا مربعة
+                          bottomRight:
+                              Radius.zero, // الزاوية اليمنى السفلى مربعة
+                        ),
+                      ),
+                      elevation: 0,
                     ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    elevation: 0,
-                  ),
-                  child: const Text(
-                    'New Action',
-                    style: TextStyle(
-                      color: Color(0xFF224F78),
-                      fontWeight: FontWeight.w600,
+                    child: Stack(
+                      clipBehavior: Clip.none,
+                      children: [
+                        // النص في منتصف الزر
+                        Center(
+                          child: const Text(
+                            'New Action',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ),
+                        // النقطة على نهاية الخلفية
+                        Positioned(
+                          top: 10, // منتصف الزر (height/2 - نصف حجم النقطة)
+                          right: -18, // على الحافة اليمنى للزر
+                          child: Container(
+                            width: 10,
+                            height: 10,
+                            decoration: const BoxDecoration(
+                              color: Color(0xFFB16800),
+                              shape: BoxShape.circle,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
+
                 const SizedBox(height: 10),
                 Row(
                   children: [
+                    _iconCircle(Icons.upload_file),
+
+                    const SizedBox(width: 20),
                     _iconCircle(Icons.notifications_none),
-                    const SizedBox(width: 10),
-                    _iconCircle(Icons.download_rounded),
                   ],
                 ),
               ],
